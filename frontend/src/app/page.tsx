@@ -61,7 +61,7 @@ export default function DetectiveAI_Master() {
     const formData = new FormData();
     formData.append('file', file);
     try {
-      const res = await fetch('http://localhost:8000/analyze', { method: 'POST', body: formData });
+      const res = await fetch('https://detective-ai-backend.onrender.com/analyze', { method: 'POST', body: formData });
       const result = await res.json();
       setData(result);
       addLog(`Signature Hashed: ${result.hash.substring(0, 16)}...`);
