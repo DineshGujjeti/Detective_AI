@@ -36,7 +36,7 @@ export default function DetectiveAI_Master() {
       intel = {
         level: 'CRITICAL', color: 'text-red-500',
         scenario: 'High-Probability Aggravated Assault',
-        hits: `WEAPON_DETECTED [${labels.find(l => ['knife', 'firearm', 'baseball bat'].includes(l))?.toUpperCase()}]`,
+        hits: `WEAPON_DETECTED [${labels.find((l: any) => ['knife', 'firearm', 'baseball bat'].includes(l))?.toUpperCase()}]`,
         clues: "Lethal artifact localized via YOLO11 geometry logic.",
         prediction: "92% probability of kinetic engagement within T-minus 120s.",
         solution: "Deploy Emergency Response Units. Lockdown perimeter immediately."
